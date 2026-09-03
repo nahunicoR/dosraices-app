@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import { CONFIG } from '../config/config';
+import { FaLocationDot } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
 
 interface HeaderProps {
   terminoBusqueda: string;
@@ -25,7 +28,8 @@ export function Header({ terminoBusqueda, onCambiarBusqueda }: HeaderProps) {
                   className="text-green-500 hover:text-white text-sm"
                   title="WhatsApp"
                 >
-                  <i className="fa-brands fa-whatsapp text-xl" />
+                  <IoLogoWhatsapp size={20} color='#3AAD3F' />
+
                 </a>
                 <a
                   href={CONFIG.INSTAGRAM_URL}
@@ -34,7 +38,7 @@ export function Header({ terminoBusqueda, onCambiarBusqueda }: HeaderProps) {
                   className="text-fuchsia-300 hover:text-white text-sm"
                   title="Instagram"
                 >
-                  <i className="fa-brands fa-instagram text-xl" />
+                  <FaInstagram size={20} color='#D433CC' />
                 </a>
                 <a
                   href={CONFIG.UBICACION_URL}
@@ -43,7 +47,7 @@ export function Header({ terminoBusqueda, onCambiarBusqueda }: HeaderProps) {
                   className="text-red-500 hover:text-white text-sm"
                   title="Ubicación"
                 >
-                  <i className="fa-solid fa-location-dot text-xl" />
+                  <FaLocationDot size={20} color='#E61F0A' />
                 </a>
                 <Link
                   to="/"
@@ -65,7 +69,7 @@ export function Header({ terminoBusqueda, onCambiarBusqueda }: HeaderProps) {
               value={terminoBusqueda}
               onChange={(evento) => onCambiarBusqueda(evento.target.value)}
               placeholder="Buscar productos..."
-              className="w-full rounded-full px-4 py-2 text-stone-800 focus:outline-none"
+              className="w-full rounded-md px-4 py-2 text-stone-800 focus:outline-none"
             />
           </div>
         </div>
