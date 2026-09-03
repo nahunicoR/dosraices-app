@@ -25,6 +25,10 @@ export function TablaCategoria({ categoria, productos, indice }: TablaCategoriaP
               <th className="px-4 py-2 font-semibold">Producto</th>
               <th className="px-4 py-2 font-semibold">Presentación</th>
               <th className="px-4 py-2 font-semibold text-right">
+                <span className="hidden sm:inline">Precio minorista</span>
+                <span className="sm:hidden">Precio</span>
+              </th>
+              <th className="px-4 py-2 font-semibold text-right">
                 <span className="hidden sm:inline">Precio mayorista</span>
                 <span className="sm:hidden">Precio</span>
               </th>
@@ -33,8 +37,15 @@ export function TablaCategoria({ categoria, productos, indice }: TablaCategoriaP
           <tbody>
             {productos.map((producto) => (
               <tr key={producto.id} className="border-b border-stone-50 last:border-0 hover:bg-stone-50">
-                <td className="px-4 py-2.5 text-stone-800">{producto.nombre_producto}</td>
-                <td className="px-4 py-2.5 text-stone-500">{producto.presentacion ?? '—'}</td>
+                <td className="px-4 py-2.5 text-stone-800 flex gap-3"><span ><img className='w-7' src={producto?.imagen_producto} alt={producto.nombre_producto} /></span>{producto.nombre_producto} </td>
+                <td className="px-4 py-2.5 text-stone-500 text-center font-semibold">{producto.presentacion ?? '—'}</td>
+                <td className="px-4 py-2.5 text-right font-semibold">
+                  {producto.stock > 0 ? (
+                    <span className="text-brand-dark">{formatearPrecio(producto.precio_minorista)}</span>
+                  ) : (
+                    <span className="text-red-600 text-xs font-bold uppercase">Sin stock</span>
+                  )}
+                </td>
                 <td className="px-4 py-2.5 text-right font-semibold">
                   {producto.stock > 0 ? (
                     <span className="text-brand-dark">{formatearPrecio(producto.precio_mayorista)}</span>
