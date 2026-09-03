@@ -40,7 +40,7 @@ export async function obtenerProductos(forzarRecarga = false): Promise<Producto[
     categoria: String(p.categoria).trim(),
     imagen_producto: p.imagen_producto ? String(p.imagen_producto).trim() : undefined,
     presentacion: p.presentacion ? String(p.presentacion).trim() : undefined,
-  }));
+  })).filter(p => p.precio_minorista && p.precio_mayorista);
 
   return cacheProductos;
 }
