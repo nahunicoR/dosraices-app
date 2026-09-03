@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { obtenerEstiloCategoria } from '../config/estilosCategoria';
+import { FaArrowLeft } from "react-icons/fa6";
 
 interface PortadaMayoristaProps {
   categorias: string[];
@@ -21,9 +22,8 @@ export function PortadaMayorista({ categorias }: PortadaMayoristaProps) {
     <aside className="lg:w-[360px] lg:h-screen shrink-0 bg-cover text-white flex flex-col bg-blend-overlay bg-black/55"
       style={{ backgroundImage: "url('/images/bg-image.png')" }}>
       <div className="flex-1 lg:overflow-y-auto px-6 py-8 flex flex-col items-center text-center">
-        <Link to="/" className="self-start text-[11px] hover:text-white transition mb-8">
-          <i className="fa-solid fa-arrow-left mr-1.5" aria-hidden="true" />
-          Volver al inicio
+        <Link to="/" className="self-start flex gap-2 items-center text-[14px] hover:text-white transition mb-8">
+          <FaArrowLeft />Volver al inicio
         </Link>
 
         <div className="w-20 h-20 rounded-full border-2  bg-white/5 flex items-center justify-center mb-4">
@@ -45,12 +45,13 @@ export function PortadaMayorista({ categorias }: PortadaMayoristaProps) {
           <div className="grid grid-cols-4 gap-x-3 gap-y-4 mt-8 w-full max-w-[280px]">
             {categorias.map((categoria, indice) => {
               const estilo = obtenerEstiloCategoria(categoria, indice);
+              const Icono = estilo.icono; // alias con mayúscula: así JSX lo trata como componente
               return (
                 <div key={categoria} className="flex flex-col items-center gap-1.5">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${estilo.claseColor}`}>
-                    <i className={`${estilo.icono} text-sm text-white`} aria-hidden="true" />
+                    <Icono className="text-sm text-white" aria-hidden="true" />
                   </div>
-                  <span className="text-[12px] leading-tight text-white font-semibold">{categoria}</span>
+                  <span className="text-[12px] leading-tight font-semibold">{categoria}</span>
                 </div>
               );
             })}
