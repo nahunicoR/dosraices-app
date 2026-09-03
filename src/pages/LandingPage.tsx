@@ -23,6 +23,13 @@ export function LandingPage() {
             Venta Minorista
             <span className="block text-xs font-normal text-stone-400 mt-1">Por unidad, sin mínimo</span>
           </Link>
+          <Link
+            to="/catalogo"
+            className="block w-full bg-white border-2 border-brand-dark text-brand-dark rounded-xl py-4 font-semibold hover:bg-stone-50 transition"
+          >
+            Ver Catalogo Completo
+            <span className="block text-xs font-normal text-stone-400 mt-1">Solo muestra - NO SHOP</span>
+          </Link>
         </div>
       </div>
     </div>
