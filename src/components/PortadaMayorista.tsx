@@ -19,7 +19,7 @@ export function PortadaMayorista({ categorias }: PortadaMayoristaProps) {
 
   return (
     <aside className="lg:w-[360px] lg:h-screen shrink-0 bg-cover text-white flex flex-col bg-blend-overlay bg-black/55"
-      style={{ backgroundImage: "url('/public/images/bg-image.jfif')" }}>
+      style={{ backgroundImage: "url('/images/bg-image.png')" }}>
       <div className="flex-1 lg:overflow-y-auto px-6 py-8 flex flex-col items-center text-center">
         <Link to="/" className="self-start text-[11px] hover:text-white transition mb-8">
           <i className="fa-solid fa-arrow-left mr-1.5" aria-hidden="true" />
