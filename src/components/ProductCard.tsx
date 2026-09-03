@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaShoppingCart } from "react-icons/fa";
 import type { Producto } from '../types/producto';
 import { formatearPrecio } from '../utils/formatPrice';
 import { obtenerPrecioSegunModo } from '../utils/precioSegunModo';
@@ -74,10 +75,10 @@ export function ProductCard({ producto }: ProductCardProps) {
         <button
           type="button"
           onClick={() => agregarAlCarrito(producto, cantidad)}
-          className="mt-3 w-full bg-brand-dark text-white rounded-lg py-2 text-sm font-medium hover:bg-brand transition"
+          className="mt-3 w-full bg-brand-dark text-white rounded-lg py-2 flex items-center justify-center hover:bg-brand transition"
           aria-label={`Agregar ${producto.nombre_producto} al carrito`}
         >
-          <i className="fa-solid fa-cart-plus" aria-hidden="true" />
+          <FaShoppingCart size={20} />
         </button>
       </div>
     </div>
