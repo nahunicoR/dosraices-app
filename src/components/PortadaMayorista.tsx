@@ -1,7 +1,9 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { obtenerEstiloCategoria } from '../config/estilosCategoria';
-import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowLeft, FaHandHoldingHand } from "react-icons/fa6";
+import { MdOutlineWorkspacePremium } from "react-icons/md";
+import { PiOrangeBold } from "react-icons/pi";
 
 interface PortadaMayoristaProps {
   categorias: string[];
@@ -19,15 +21,15 @@ export function PortadaMayorista({ categorias }: PortadaMayoristaProps) {
   }, []);
 
   return (
-    <aside className="lg:w-[360px] lg:h-screen shrink-0 bg-cover text-white flex flex-col bg-blend-overlay bg-black/55"
-      style={{ backgroundImage: "url('/images/bg-image.png')" }}>
+    <aside className="lg:w-[460px] lg:h-screen shrink-0 bg-cover text-white flex flex-col bg-blend-overlay bg-black/55"
+      style={{ backgroundImage: "url('/images/flyer-png.png')" }}>
       <div className="flex-1 lg:overflow-y-auto px-6 py-8 flex flex-col items-center text-center">
         <Link to="/" className="self-start flex gap-2 items-center text-[14px] hover:text-white transition mb-8">
           <FaArrowLeft />Volver al inicio
         </Link>
 
         <div className="w-20 h-20 rounded-full border-2  bg-white/5 flex items-center justify-center mb-4">
-          <i className="fa-solid fa-tree text-3xl" aria-hidden="true" />
+          <img className='rounded-full' src="/images/dosraices_logo.png" alt="Dos Raíces Logo" />
         </div>
         <h1 className="text-2xl font-bold tracking-wide">DOS RAÍCES</h1>
         <p className="text-[14px] tracking-[0.2em] font-semibold mt-1 italic">DISTRIBUIDORA MAYORISTA</p>
@@ -60,15 +62,15 @@ export function PortadaMayorista({ categorias }: PortadaMayoristaProps) {
 
         <div className="mt-10 pt-6 w-full border-t  grid grid-cols-3 gap-2 text-[10px]">
           <div className="flex flex-col items-center gap-1.5">
-            <i className="fa-solid fa-medal" aria-hidden="true" />
+            <MdOutlineWorkspacePremium size={30} />
             Calidad seleccionada
           </div>
           <div className="flex flex-col items-center gap-1.5">
-            <i className="fa-solid fa-leaf" aria-hidden="true" />
+            <PiOrangeBold size={30} />
             Productos naturales
           </div>
           <div className="flex flex-col items-center gap-1.5">
-            <i className="fa-solid fa-handshake" aria-hidden="true" />
+            <FaHandHoldingHand size={30} />
             Confianza y compromiso
           </div>
         </div>
