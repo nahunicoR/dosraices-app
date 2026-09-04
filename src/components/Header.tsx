@@ -16,7 +16,7 @@ export function Header({ terminoBusqueda, onCambiarBusqueda }: HeaderProps) {
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-full bg-white/10 border border-white/30 flex items-center justify-center font-bold text-sm shrink-0">
-              DR
+              <img className='rounded-full' src="/images/dosraices_logo.png" alt="Dos Raíces Distribuidora Logo" />
             </div>
             <div>
               <h1 className="text-lg font-bold leading-tight">Dietética Dos Raíces</h1>
