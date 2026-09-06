@@ -2,7 +2,8 @@ import { useMemo } from 'react';
 import { useCatalogo } from '../hooks/useCatalogo';
 import { obtenerCategorias } from '../services/catalogoService';
 import { PortadaMayorista } from '../components/PortadaMayorista';
-import { TablaCategoria } from '../components/TablaCategoria';
+// import { TablaCategoria } from '../components/TablaCategoria';
+import { TableComponent } from '../components/TableComponent';
 
 /**
  * Página de solo lectura (no tiene carrito): reproduce la lista de precios
@@ -27,11 +28,17 @@ export function ListaPreciosPage() {
       <PortadaMayorista categorias={categorias} />
 
       <main className="flex-1 lg:h-screen lg:overflow-y-auto px-4 sm:px-8 py-8">
-        <div className="max-w-3xl mx-auto space-y-6">
+        {/* 
+          //!!eliminar <div className="max-w-3xl mx-auto space-y-6"></div>
+          //!!se expande pero puede romper.
+        <div className="max-w-3xl mx-auto space-y-6"></div>
+        
+        */}
+        <div className=" mx-auto space-y-6">
           {cargando && <p className="text-center text-stone-500 py-12">Cargando lista de precios...</p>}
 
           {!cargando && error && (
-            <div className="max-w-md mx-auto text-center py-12">
+            <div className="max-w-full mx-auto text-center py-12">
               <p className="text-red-600 font-semibold">No se pudo cargar el catálogo</p>
               <p className="text-stone-500 mt-2 text-sm">{error}</p>
             </div>
@@ -44,7 +51,7 @@ export function ListaPreciosPage() {
           {!cargando &&
             !error &&
             categorias.map((categoria, indice) => (
-              <TablaCategoria
+              <TableComponent
                 key={categoria}
                 categoria={categoria}
                 indice={indice}
