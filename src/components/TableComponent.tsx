@@ -46,7 +46,7 @@ export function TableComponent({ categoria, productos, indice }: TablaCategoriaP
                             {productos.map((producto) => (
                                 <tr key={producto.id} className="border-b border-stone-50 last:border-0 hover:bg-stone-50">
                                     <td className="px-4 py-2.5 text-stone-800 flex gap-3">
-                                        <span ><img className='w-7 rounded-full' src={producto?.imagen_producto} alt={producto.nombre_producto} /></span>
+                                        <span ><img className='w-7 max-h-4 rounded-full' src={producto?.imagen_producto} alt={producto.nombre_producto} /></span>
                                         {producto.nombre_producto}
                                     </td>
                                     <td className="px-4 text-stone-500 text-center font-semibold">{producto.presentacion ?? '—'}</td>
@@ -140,7 +140,7 @@ export function TableComponent({ categoria, productos, indice }: TablaCategoriaP
                         <tbody>
                             {productos.map((producto) => (
                                 <tr key={producto.id} className="border-b border-stone-50 last:border-0 hover:bg-stone-50">
-                                    <td className="px-4 py-2.5 text-stone-800 flex gap-3"><span ><img className='w-7 rounded-full' src={producto?.imagen_producto} alt={producto.nombre_producto} /></span>{producto.nombre_producto} </td>
+                                    <td className="px-4 py-2.5 text-stone-800 flex gap-3"><span ><img className='w-7 max-h-7 rounded-full' src={producto?.imagen_producto} alt={producto.nombre_producto} /></span>{producto.nombre_producto} </td>
                                     <td className="px-4 py-2.5 text-stone-500 text-center font-semibold">{producto.presentacion ?? '—'}</td>
                                     <td className="px-4 py-2.5 text-right font-semibold">
                                         {producto.stock > 0 ? (
