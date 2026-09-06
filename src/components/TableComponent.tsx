@@ -49,7 +49,7 @@ export function TableComponent({ categoria, productos, indice }: TablaCategoriaP
                                         <span ><img className='w-7 rounded-full' src={producto?.imagen_producto} alt={producto.nombre_producto} /></span>
                                         {producto.nombre_producto}
                                     </td>
-                                    <td className="px-4 py-2.5 text-stone-500 text-center font-semibold">{producto.presentacion ?? '—'}</td>
+                                    <td className="px-4 text-stone-500 text-center font-semibold">{producto.presentacion ?? '—'}</td>
                                     <td className="px-4 py-2.5 text-right font-semibold">
                                         {producto.stock > 0 ? (
                                             <span className="text-brand-dark">{formatearPrecio(producto.minorista_100gr)}</span>
@@ -126,7 +126,7 @@ export function TableComponent({ categoria, productos, indice }: TablaCategoriaP
                         <thead>
                             <tr className="text-left text-stone-400 text-[11px] uppercase border-b border-stone-100">
                                 <th className="px-4 py-2 font-semibold">Producto</th>
-                                <th className="px-4 py-2 font-semibold">Presentación</th>
+                                <th className="px-4 py-2 font-semibold text-center">Presentación</th>
                                 <th className="px-4 py-2 font-semibold text-right">
                                     <span className="hidden sm:inline">Precio minorista</span>
                                     <span className="sm:hidden">Precio</span>
