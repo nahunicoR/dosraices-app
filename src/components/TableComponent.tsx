@@ -24,7 +24,7 @@ export function TableComponent({ categoria, productos, indice }: TablaCategoriaP
                     <table className="w-full text-sm">
                         <thead>
                             <tr className="text-right text-stone-400 text-[11px] uppercase border-b border-stone-100">
-                                <th className="px-4 py-2 font-semibold">Producto</th>
+                                <th className="text-left px-4 py-2 font-semibold">Producto</th>
                                 <th className="px-4 py-2 font-semibold">Presentación</th>
                                 <th className="px-4 py-2 font-semibold">minorista 100gr</th>
                                 <th className="px-4 py-2 font-semibold">minorista 250gr</th>
