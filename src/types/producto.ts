@@ -11,10 +11,17 @@ export interface Producto {
   categoria: string;
   descripcion: string;
   stock: number;
+
   // Precios distintos según el canal de venta (ver Sheet: columnas
   // precio_minorista y precio_mayorista).
   precio_minorista: number;
   precio_mayorista: number;
+  minorista_100gr: number;
+  minorista_250gr: number;
+  minorista_500gr: number;
+  MAYORISTA_250gr: number;
+  MAYORISTA_500gr: number;
+  MAYORISTA_1KG: number;
   metodo_envio: MetodoEnvio;
   // Opcional: URL pública de la foto del producto.
   imagen_producto?: string;
