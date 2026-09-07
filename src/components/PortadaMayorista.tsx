@@ -9,11 +9,6 @@ interface PortadaMayoristaProps {
   categorias: string[];
 }
 
-/**
- * Panel de marca, fijo a la izquierda mientras las tablas de la derecha scrollean.
- * Es una aproximación con Tailwind + íconos (no tenemos el logo ni la foto reales
- * todavía) — reemplazable después por las imágenes de la lista impresa.
- */
 export function PortadaMayorista({ categorias }: PortadaMayoristaProps) {
   const edicion = useMemo(() => {
     const texto = new Intl.DateTimeFormat('es-AR', { month: 'long', year: 'numeric' }).format(new Date());
