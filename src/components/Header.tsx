@@ -19,7 +19,7 @@ export function Header({ terminoBusqueda, onCambiarBusqueda }: HeaderProps) {
               <img className='rounded-full' src="/images/dosraices_logo.png" alt="Dos Raíces Distribuidora Logo" />
             </div>
             <div>
-              <h1 className="text-lg font-bold leading-tight">Dietética Dos Raíces</h1>
+              <h1 className="text-lg font-bold leading-tight">Dos Raíces Market</h1>
               <div className="flex items-center gap-2 mt-0.5">
                 <a
                   href={`https://wa.me/${CONFIG.WHATSAPP_NUMBER}`}
