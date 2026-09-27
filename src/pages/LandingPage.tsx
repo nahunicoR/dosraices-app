@@ -4,7 +4,7 @@ export function LandingPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-paper px-4">
       <div className="max-w-md w-full text-center">
-        <h1 className="text-2xl font-bold text-brand-dark mb-2">Dietética Dos Raíces</h1>
+        <h1 className="text-2xl font-bold text-brand-dark mb-2">Dos Raíces Market</h1>
         <p className="text-stone-500 mb-8">¿Cómo querés comprar hoy?</p>
         <div className="space-y-4">
           <Link
