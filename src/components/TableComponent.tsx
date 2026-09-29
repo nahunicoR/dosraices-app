@@ -128,11 +128,11 @@ export function TableComponent({ categoria, productos, indice }: TablaCategoriaP
                                 <th className="px-4 py-2 font-semibold">Producto</th>
                                 <th className="px-4 py-2 font-semibold text-center">Presentación</th>
                                 <th className="px-4 py-2 font-semibold text-right">
-                                    <span className="hidden sm:inline">Precio minorista</span>
+                                    <span className="hidden sm:inline">Minorista</span>
                                     <span className="sm:hidden">Precio</span>
                                 </th>
                                 <th className="px-4 py-2 font-semibold text-right">
-                                    <span className="hidden sm:inline">Precio mayorista</span>
+                                    <span className="hidden sm:inline">Mayorista</span>
                                     <span className="sm:hidden">Precio</span>
                                 </th>
                             </tr>
