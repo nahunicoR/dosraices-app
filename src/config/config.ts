@@ -19,5 +19,5 @@ export const CONFIG = {
 
   // Monto mínimo de compra, exigido únicamente en la página mayorista (/mayorista).
   // La página minorista (/minorista) nunca pide mínimo.
-  MINIMUM_PURCHASE_AMOUNT: 250000,
+  MINIMUM_PURCHASE_AMOUNT: 150000,
 } as const;
